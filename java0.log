@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2015-11-08T10:43:27</date>
+  <millis>1446972207589</millis>
+  <sequence>0</sequence>
+  <logger>com.worklight.common.util.JNDIUtils</logger>
+  <level>INFO</level>
+  <class>com.worklight.common.util.JNDIFromPropertiesUtil</class>
+  <method>getPropertiesFromResource</method>
+  <thread>38</thread>
+  <message>Resource conf/jndi/default.properties not found. This is not an error. Context path is /</message>
+</record>
+<record>
+  <date>2015-11-08T10:43:27</date>
+  <millis>1446972207688</millis>
+  <sequence>1</sequence>
+  <logger>com.worklight.common.util.JNDIUtils</logger>
+  <level>INFO</level>
+  <class>com.worklight.common.util.JNDIFromPropertiesUtil</class>
+  <method>getPropertiesFromResource</method>
+  <thread>38</thread>
+  <message>Resource conf/jndi/default.properties not found. This is not an error. Context path is __globalscope__</message>
+</record>
