@@ -25,6 +25,7 @@
 	WLProcedureInvocationResult *invocationResult;
 	NSObject *invocationContext;
 	NSString *responseText;
+    NSDictionary *userInfoDict;
 }
 
 /**
@@ -56,6 +57,11 @@
  * Original response data from the server.
  */
 @property (readonly) NSData* responseData;
+
+/**
+ * user info
+ */
+@property (nonatomic, strong) NSDictionary* userInfoDict;
 
 /**
  * Returns the value <code>NSDictionary</code> in case the response is a JSON response, otherwise it returns the value nil.

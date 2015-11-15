@@ -41,11 +41,19 @@ extern NSString * const ERROR_OAUTH_CANCELED;
 - (NSString *) signPayload:(NSDictionary *) payload;
 
 /**
- *  Adds the authorization header value to any <code>NSURLRequest</code> request
+ *  Logout from this security check
  *
- *  @param request Request
+ *  @param NSString - The security check to sign out from
  */
-//- (void) addCachedAuthorizationHeaderToRequest:(NSMutableURLRequest*)request;
+- (void) logout:(NSString *) securityCheck WithCompletionHandler:(void(^) (NSError* error))completionHandler;
+
+/**
+ *  Login to this security check
+ *
+ *  @param NSString - The security check to log in to
+ *  @param NSDictionary - The credentials to use for logging in to the security check
+ */
+- (void) login:(NSString *) securityCheck WithCredentials:(NSDictionary *)credentials WithCompletionHandler:(void(^)(WLResponse* response, NSError* error))completionHandler;
 
 /**
  * Checks whether the response is a MobileFirst OAuth error.
