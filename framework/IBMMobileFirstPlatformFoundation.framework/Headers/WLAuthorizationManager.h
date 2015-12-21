@@ -1,12 +1,18 @@
-/*
- * Licensed Materials - Property of IBM
- * 5725-I43 (C) Copyright IBM Corp. 2006, 2013. All Rights Reserved.
- * US Government Users Restricted Rights - Use, duplication or
- * disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
- */
+/**
+	Licensed Materials - Property of IBM
+
+	(C) Copyright 2015 IBM Corp.
+
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
+*/
 
 #import <Foundation/Foundation.h>
 #import "WLResponse.h"
+#import "AccessToken.h"
 
 extern NSString * const ERROR_OAUTH_PREVENT_REDIRECT;
 extern NSString * const ERROR_OAUTH_CANCELED;
@@ -26,40 +32,35 @@ extern NSString * const ERROR_OAUTH_CANCELED;
 
 
 /**
- * Explicit call to obtain the access token.
+ * Obtains an access token for the specified MobileFirst protected resource scope.
  *
- * @param completionHandler Completion handler with response containing the authorization header value.
- * @param scope OAuth scope that the resource requires.
+ * @param scope The protected resource scope. ToDo - document the behaviour in case of nil or empty scope
+ * @param completionHandler Completion handler with response containing the access token, or error information in case of failure.
  */
-- (void) obtainAuthorizationHeaderForScope:(NSString*)scope completionHandler:(void(^) (WLResponse* response, NSError* error))completionHandler;
+- (void) obtainAccessTokenForScope:(NSString*)scope withCompletionHandler:(void(^) (AccessToken* accessToken, NSError* error))completionHandler;
 
 /**
- *  Signs payload using the device's private key and returns a JWS Object
+ *  Logout from the specified security check.
  *
- *  @param NSDictionary payload to be signed
+ *  @param NSString - The security check to log out from.
+ *  @param completionHandler Completion handler with response containing error information in case of failure.
  */
-- (NSString *) signPayload:(NSDictionary *) payload;
+- (void) logout:(NSString *) securityCheck withCompletionHandler:(void(^) (NSError* error))completionHandler;
 
 /**
- *  Logout from this security check
+ *  Login to the specified security check.
  *
- *  @param NSString - The security check to sign out from
+ *  @param NSString - The security check to log in to.
+ *  @param NSDictionary - The credentials to use for login to the security check.
+ *  @param completionHandler Completion handler containing the response, and error information in case of failure.
  */
-- (void) logout:(NSString *) securityCheck WithCompletionHandler:(void(^) (NSError* error))completionHandler;
+- (void) login:(NSString *) securityCheck withCredentials:(NSDictionary *)credentials withCompletionHandler:(void(^)(NSError* error))completionHandler;
 
 /**
- *  Login to this security check
+ * Checks if the response for a request to a MobileFirst protected resource indicates that authorization is required.
  *
- *  @param NSString - The security check to log in to
- *  @param NSDictionary - The credentials to use for logging in to the security check
- */
-- (void) login:(NSString *) securityCheck WithCredentials:(NSDictionary *)credentials WithCompletionHandler:(void(^)(WLResponse* response, NSError* error))completionHandler;
-
-/**
- * Checks whether the response is a MobileFirst OAuth error.
- *
- * @param NSURLResponse response
- * @return true if the response is a MobileFirst OAuth error, or false otherwise.
+ * @param NSURLResponse response.
+ * @return true if MobileFirst authorization is required, false otherwise.
  */
 - (BOOL) isAuthorizationRequiredForResponse:(NSURLResponse *)response;
 
@@ -72,23 +73,30 @@ extern NSString * const ERROR_OAUTH_CANCELED;
  */
 
 - (BOOL) isAuthorizationRequiredForResponseWithStatus:(NSInteger)status
-                                  authorizationHeader:(NSString *) authorizationHeader;
+                                  headers:(NSDictionary *) headers;
 
 /**
- * Gets the scope of the response from a protected resource
+ * Returns the resource scope from a response for a request to a MobileFirst protected resource.
  *
- * @param response Response returned from protected resource
+ * @param response Response returned for the request to a protected resource.
  * @return Scope that is returned in the <code>WWW-Authenticate</code> header
  */
-- (NSString *) authorizationScopeForResponse : (NSURLResponse *) response;
+- (NSString *) resourceScopeFromResponse : (NSURLResponse *) response;
 
 
 /**
- * Gets the scope of the response from a protected resource
+ * Clears an invalid Access token from the WLAuthorizationManager cache
  *
- * @param NSDictionary Response headers
+ * @param AccessToken to remove
+ */
+- (void) clearAccessToken:(AccessToken*)accessToken;
+
+/**
+ * Returns the resource scope from a response for a request to a MobileFirst protected resource.
+ *
+ * @param NSDictionary Response headers returned for the request to a protected resource.
  * @return Scope that is returned in the <code>WWW-Authenticate</code> header
  */
-- (NSString*) authorizationScopeForResponseWithAuthorizationHeader:(NSString *) authorizationHeader;
+- (NSString*) resourceScopeFromResponseHeaders:(NSDictionary *) headers;
 
 @end

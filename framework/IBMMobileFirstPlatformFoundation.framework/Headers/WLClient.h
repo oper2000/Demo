@@ -1,8 +1,13 @@
-/*
-* Licensed Materials - Property of IBM
-* 5725-I43 (C) Copyright IBM Corp. 2006, 2013. All Rights Reserved.
-* US Government Users Restricted Rights - Use, duplication or
-* disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+/**
+	Licensed Materials - Property of IBM
+
+	(C) Copyright 2015 IBM Corp.
+
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
 */
 
 //
@@ -103,33 +108,33 @@ extern NSMutableDictionary *piggyBackData;
 -(void) sendUrlRequest:(NSURLRequest *)request delegate:(id)delegate;
 
 /**
- * This method uses the connection properties and the application ID from the worklight.plist file to initialize communication with the IBM MobileFirst Platform Server.
+ * This method uses the connection properties and the application ID from the mfplient.plist file to initialize communication with the IBM MobileFirst Platform Server.
  * The server checks the validity of the application version.
  *
  * If the server returns a successful response, the <code>onSuccess</code> method is called. If an error occurs, the <code>onFailure</code> method is called.
- * @note This method must be called before any other WLClient method that calls the server, such as <code>logActivity</code> and <code>invokeProcedure.</code>
+ * @note This method must be called before any other WLClient method that calls the server, such as <code>invokeProcedure.</code>
  * @param delegate A class that conforms to the WLDelegate protocol.
  * @param cookieExtractor Optional, can be nil. Used to share the cookies between the native code and the web code in the app.
  */
 -(void) wlConnectWithDelegate:(id <WLDelegate>)delegate cookieExtractor:(WLCookieExtractor *) cookieExtractor;
 
 /**
- * This method uses the connection properties and the application ID from the worklight.plist file to initialize communication with the IBM MobileFirst Platform Server.
+ * This method uses the connection properties and the application ID from the mfplient.plist file to initialize communication with the IBM MobileFirst Platform Server.
  * The server checks the validity of the application version.
  *
  * If the server returns a successful response, the <code>onSuccess</code> method is called. If an error occurs, the <code>onFailure</code> method is called.
- * @note This method must be called before any other WLClient method that calls the server, such as <code>logActivity</code> and <code>invokeProcedure.</code>
+ * @note This method must be called before any other WLClient method that calls the server, such as <code>invokeProcedure.</code>
  * @param delegate A class that conforms to the WLDelegate protocol.
  */
 -(void) wlConnectWithDelegate:(id <WLDelegate>)delegate;
 
 /**
- * This method uses the connection properties and the application ID from the worklight.plist file to initialize communication with the IBM MobileFirst Platform Server.
+ * This method uses the connection properties and the application ID from the mfplient.plist file to initialize communication with the IBM MobileFirst Platform Server.
  * The server checks the validity of the application version.
  * This method accepts a "timeout" key in its options parameter -  (NSNumber) Number of milliseconds to wait for the server response before the request times out.
  * 
  * If the server returns a successful response, the <code>onSuccess</code> method is called. If an error occurs, the <code>onFailure</code> method is called.
- * @note This method must be called before any other WLClient method that calls the server, such as <code>logActivity</code> and <code>invokeProcedure.</code>
+ * @note This method must be called before any other WLClient method that calls the server, such as <code>invokeProcedure.</code>
  * @param delegate A class that conforms to the WLDelegate protocol.
  * @param options Optional, can be nil. Used to set the timeout while connecting to the server and/or to set the application userId which is used by Push service. In this dictionary the user puts key "timeout" (milliseconds) to set the timeout or the key "appUserId" (NSString) to set the application UserId.
  */
@@ -236,16 +241,6 @@ extern NSMutableDictionary *piggyBackData;
  */
 -(int) getEventSourceIDFromUserInfo:(NSDictionary *)userInfo;
 
-/**
- * This method reports a user activity for auditing or reporting purposes.
- *
- * The activity is stored in the application statistics tables (the GADGET_STAT_N tables).
- *
- * @deprecated since V7.0.  Use OCLogger instead.
- *
- * @param activityType A string that identifies the activity.
- */
--(void) logActivity:(NSString *) activityType;
 
 /**
  * You can use this method to register a custom Challenge Handler, which is a class that inherits from ChallengeHandler. See example 1: Adding a custom Challenge Handler.
@@ -280,7 +275,7 @@ extern NSMutableDictionary *piggyBackData;
 /**
  * Get challenge handler by realm key
  */
--(BaseChallengeHandler *) getChallengeHandlerByRealm: (NSString *) realm;
+-(BaseChallengeHandler *) getChallengeHandlerBySecurityCheck: (NSString *) securityCheck;
 
 
 -(NSDictionary *) getAllChallengeHandlers;
@@ -328,115 +323,6 @@ extern NSMutableDictionary *piggyBackData;
  * @return IBM MobileFirst Platform server URL
  */
 - (NSURL*) serverUrl;
-
-/**
- * This method logs in to a specific realm. It is an asynchronous function.
- * You must specify the realm name and a wlDelegate instance for accepting onSuccess and onFailure events.
- * A default timeout of 60 seconds is used for waiting for the server to respond before the request times out.
- *
- * @param realmName the realm name to log in to
- * @param delegate implements wlDelegate protocol (which has onSuccess and onFailure methods)
-**/
-- (void) login:(NSString *) realmName withDelegate:(id <WLDelegate>)delegate;
-
-/**
- * This method logs in to a specific realm. It is an asynchronous function.
- * You must specify the realm name and a wlDelegate instance for accepting onSuccess and onFailure events.
- * This method accepts a "timeout" key in its options parameter -  (NSNumber) Number of milliseconds to wait for the server response
- * before the request times out.
- *
- * @param realmName the realm name to log in to
- * @param delegate implements wlDelegate protocol (which has onSuccess and onFailure methods)
- * @param options in this dictionary - the user puts the key "timeout" (milliseconds)
-**/
-- (void) login:(NSString *) realmName withDelegate:(id <WLDelegate>)delegate options:(NSDictionary *)options;
-
-
-/**
- * This method logs out of a specific realm. It is an asynchronous function.
- * You must specify the realm name and a wlDelegate instance for accepting onSuccess and onFailure events.
- * A default timeout of 60 seconds is used for waiting for the server to respond before the request times out
- *
- * @param realmName the realm name to logout from
- * @param delegate implements wlDelegate protocol (which has onSuccess and onFailure methods)
-**/
-- (void) logout:(NSString *) realmName withDelegate:(id <WLDelegate>)delegate;
-
-/**
- Returns the last obtained access token (regardless of scope), or <code>null</code> if no tokens were previosly obtained.
- 
- @deprecated in version 7.0, use [WLAuthorizationManager cachedAuthorizationHeader] instead.
- */
-- (NSString*) lastAccessToken __attribute__((deprecated ("Use [WLAuthorizationManager cachedAuthorizationHeader] instead")));
-
-/**
- Returns the last obtained access token for a specific scope, or <code>null</code> if no tokens were previously obtained
- for the given scope.
- 
- @param scope The scope of the requested token.
- 
- @deprecated in version 7.0, use [WLAuthorizationManager cachedAuthorizationHeader] instead.
- */
-- (NSString*) lastAccessTokenForScope:(NSString*)scope __attribute__((deprecated("Use [WLAuthorizationManager cachedAuthorizationHeader] instead")));
-
-/**
- Obtains an oauth 2.0 access token from the IBM MobileFirst Platform server. The token is required in order to send a request
- to an external server which uses this IBM MobileFirst Platform authentication method.
- This method is asynchronous; the response is returned to the supplied delegate callback functions.
- 
- Note that there is no need to parse the response for the access token. Instead, use <code>WL.Client.lastAccessToken</code>
- or <code>WL.Client.lastAccessTokenForScope</code> in order to get the last obtained token.
- 
- @param delegate WLDelegate. Implements the callback methods onSuccess and onFailure.
- 
- @exception NSException raised if scope or delegate are nil. 
- 
- @deprecated in version 7.0, use [WLAuthorizationManager obtainAuthorizationHeaderForScope] instead.
- */
-
-- (void) obtainAccessTokenForScope:(NSString*)scope withDelegate:(id<WLDelegate>)delegate __attribute__((deprecated("Use [WLAuthorizationManager obtainAuthorizationHeaderForScope] instead")));
-
-/**
- Obtains an oauth 2.0 access token from the IBM MobileFirst Platform server. The token is required in order to send a request
- to an external server which uses this IBM MobileFirst Platform authentication method.
- This method is asynchronous; the response is returned to the supplied delegate callback functions.
- 
- Note that there is no need to parse the response for the access token. Instead, use <code>WL.Client.lastAccessToken</code>
- or <code>WL.Client.lastAccessTokenForScope</code> in order to get the last obtained token.
- 
- @param delegate WLDelegate. Implements the callback methods onSuccess and onFailure.
- 
- @param options A dictionary for which the following key can contain a value:
- "timeout" - NSNumber. time in miliseconds for this invokeProcedure to wait before failing with WLErrorCodeRequestTimeout
- 
- @exception NSException raised if scope or delegate are nil. 
- 
- @deprecated in version 7.0, use [WLAuthorizationManager obtainAuthorizationHeaderForScope] instead.
- */
-- (void) obtainAccessTokenForScope:(NSString*)scope withDelegate:(id<WLDelegate>)delegate options:(NSDictionary*) options __attribute__((deprecated("Use [WLAuthorizationManager obtainAuthorizationHeaderForScope] instead")));
-
-/**
- Determines whether an access token is requested by the server, and returns the required scope, or
- null if the response is not related to IBM MobileFirst Platform tokens.
- 
- @param status The status code of the response.
- @param authenticationHeader The value of the <code>WWW-Authenticate</code> header of the response.
- 
- @deprecated in version 7.0
- */
-- (NSString*) getRequiredAccessTokenScopeFromStatus:(int)status authenticationHeader:(NSString*)authHeader __attribute__((deprecated));
-
-/**
- * This method logs out of a specific realm. It is an asynchronous function.
- * You must specify the realm name and a wlDelegate instance for accepting onSuccess and onFailure events.
- * This method accepts a "timeout" key in its options parameter - (NSNumber) Number of milliseconds to wait for the server response
- * before the request times out.
- *
- * @param realmName the realm name to logout from
- * @param delegate implements wlDelegate protocol (which has onSuccess and onFailure methods)
- * @param options in this dictionary the user puts the key "timeout" (milliseconds)
-**/
-- (void) logout:(NSString *) realmName withDelegate:(id <WLDelegate>)delegate options:(NSDictionary *)options;
 
 /**
  * Pins the host X509 certificate public key to the client application. Secured calls to the pinned remote host will be checked for a public key match. Secured calls to other hosts containing other certificates will be rejected. Some mobile operating systems might cache the certificate validation check results. Your app must call the certificate pinning method before making a secured request. Calling this method a second time overrides any previous pinning operation.

@@ -1,9 +1,14 @@
-/*
- * Licensed Materials - Property of IBM
- * 5725-I43 (C) Copyright IBM Corp. 2006, 2013. All Rights Reserved.
- * US Government Users Restricted Rights - Use, duplication or
- * disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
- */
+/**
+	Licensed Materials - Property of IBM
+
+	(C) Copyright 2015 IBM Corp.
+
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
+*/
  
 //
 //  WLResourceRequest.h
@@ -120,6 +125,16 @@ extern NSString * const WLHttpMethodDelete;
 
 /**
  *
+ * Creates an instance of <code>WLresourceRequest</code> with the specified URL and method
+ * @param url URL of the request (full or relative to MobileFirst Server)
+ * @param method Method of the request (POST, GET,...)
+ * @param scope the scope that this protected resource requires
+ *
+ */
++(WLResourceRequest*) requestWithURL:(NSURL*)url method:(NSString*)method scope:(NSString*)scope;
+
+/**
+ *
  * Creates an instance of <code>WLresourceRequest</code> with the specified URL, method, and timeout
  * @param url URL of the request (full or relative to MobileFirst Server)
  * @param method Method of the request (POST, GET,...)
@@ -132,7 +147,19 @@ extern NSString * const WLHttpMethodDelete;
 
 /**
  *
- * Sets query parameter value 
+ * Creates an instance of <code>WLresourceRequest</code> with the specified URL, method, and timeout
+ * @param url URL of the request (full or relative to MobileFirst Server)
+ * @param method Method of the request (POST, GET,...)
+ * @param timeout Timeout of the request in seconds
+ * @param scope the scope that this protected resource requires
+ */
++(WLResourceRequest*) requestWithURL:
+(NSURL*)url method:
+(NSString*)method timeout:(NSTimeInterval)timeout scope:(NSString*)scope;
+
+/**
+ *
+ * Sets query parameter value
  * 
  * If the query parameter with the same name already exists, it is overridden.
  * @param parameterValue Parameter value
@@ -140,18 +167,6 @@ extern NSString * const WLHttpMethodDelete;
  *
  */
 -(void)setQueryParameterValue:(NSString*)parameterValue forName:(NSString*)parameterName;
-
-/**
- *
- * Sets the scope for this request
- *
- * If the resource is protected by a known scope, setting it will fetch an Oauth token as part
- * of the request
- * @param parameterValue Parameter value
- * @param parameterName Parameter name
- *
- */
--(void)setScope:(NSString*)scope;
 
 /**
  *

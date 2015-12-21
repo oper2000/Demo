@@ -1,8 +1,13 @@
-/*
-* Licensed Materials - Property of IBM
-* 5725-I43 (C) Copyright IBM Corp. 2006, 2013. All Rights Reserved.
-* US Government Users Restricted Rights - Use, duplication or
-* disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+/**
+	Licensed Materials - Property of IBM
+
+	(C) Copyright 2015 IBM Corp.
+
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
 */
 
 //
@@ -45,7 +50,13 @@
 // For Boolean values, use [NSNumber numberWithBool:]
 @property (nonatomic, strong) NSArray *parameters;
 
+@property (nonatomic, strong) NSString *adapter;
+
+@property (nonatomic, strong) NSString *procedure;
+
 @property (nonatomic) BOOL cacheableRequest;
+
+@property (nonatomic) BOOL compressResponse;
 
 -(NSDictionary *)toDictionary;
 
@@ -75,4 +86,6 @@
  * @param isCompressResponse Specifies whether or not the response from the server must be compressed.
  **/
 -(void)setCompressResponse :(BOOL)isCompressResponse;
+
+-(NSString *)getParameters;
 @end

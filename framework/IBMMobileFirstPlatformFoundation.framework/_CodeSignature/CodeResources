@@ -4,133 +4,137 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Headers/AccessToken.h</key>
+		<data>
+		PhHkWocysHNjMlGAc2fc0y4BSBU=
+		</data>
 		<key>Headers/BaseChallengeHandler.h</key>
 		<data>
-		s/Ny69RwzMffHbrJquTDPAbC3N0=
+		ml94T1Q4oRNG3Po1yYxTq9JVWAM=
 		</data>
 		<key>Headers/BaseDeviceAuthChallengeHandler.h</key>
 		<data>
-		F8UfVhTHKv8RCuwEdyBj1ia8XYI=
+		OSCOv0wA3oHPs1ZUk/Ngn8eGlXg=
 		</data>
 		<key>Headers/BaseProvisioningChallengeHandler.h</key>
 		<data>
-		rysR5YOvjw1Ee/6bZ1W2RytCvmo=
+		3d3RFH6CMUDvSxKBRAPzK3za4B8=
 		</data>
 		<key>Headers/ChallengeHandler.h</key>
 		<data>
-		xYtlfoNUSPS6O+xPktVZ5vKC5qY=
+		NSw1l9Qb2AQg/8p0TBSE3WBFD3E=
 		</data>
 		<key>Headers/IBMMobileFirstPlatformFoundation.h</key>
 		<data>
-		PxJYgTCHRbd9C9W/SQhJlcIyphc=
+		IVtQX+OV4KRbP6kwhNQrc7IrA+8=
 		</data>
 		<key>Headers/OCLogger+Constants.h</key>
 		<data>
-		ikxpY/oSzPvg/nJgKaDUlfQBqpw=
+		RLMiiE+GZ6FqsmOZudyhjv6G1yU=
 		</data>
 		<key>Headers/OCLogger.h</key>
 		<data>
-		ZOF5NkMcngSKkYwjezLwa+UL8nU=
+		1ruSUhp47iA9bAyWkJXHvGzkr7A=
 		</data>
 		<key>Headers/WLAnalytics.h</key>
 		<data>
-		H8HENu6M2P3yZRt3EAJoCurzhbk=
+		2+X3mxmiqfb06RPVoqMnILNYOJI=
 		</data>
 		<key>Headers/WLAuthorizationManager.h</key>
 		<data>
-		CEQmTPr1Ha3EiI0XLWYvie5Ku+Q=
-		</data>
-		<key>Headers/WLCertManagerCommon.h</key>
-		<data>
-		LtfR8IlhSiRjxfb2CvaYpG/LTX4=
+		gvP9NDiGGyfO/3EvvhXl/3dzwf0=
 		</data>
 		<key>Headers/WLChallengeHandler.h</key>
 		<data>
-		cJpan5zjdnPKCIALka3Wx+v7o9M=
+		PPFvUVCkXdX6/3FWwYHdJGf+P0M=
 		</data>
 		<key>Headers/WLClient.h</key>
 		<data>
-		ZFp8NNCVklrNTL/4V8RtdHElQ7M=
+		mhUFCELiCHHaNOkqv4e7aEMDINs=
 		</data>
 		<key>Headers/WLCookieExtractor.h</key>
 		<data>
-		BijV2VpD24dZtAoDVvkRgKMy1PA=
+		xR7cKjmjS4owlZvyzHtpTuMCtMM=
 		</data>
 		<key>Headers/WLDelegate.h</key>
 		<data>
-		d9xMvohtcpO7I8H5iUVMiWw3tbg=
+		1xzP1lBPHDbyjlmTZhEvpFYwUBY=
 		</data>
 		<key>Headers/WLDeviceAuthManager.h</key>
 		<data>
-		D7Xh8DbO+CfGc0ZS/GTHfiNBBAQ=
+		//SpiCveMgMeInTt/tn0fGqHNaE=
 		</data>
 		<key>Headers/WLEventSourceListener.h</key>
 		<data>
-		d8HYVGVforHmlbNH0hPm7WgPsyc=
+		0609u7qh9T9O6BL9c8Y2tyesaU4=
 		</data>
 		<key>Headers/WLFailResponse.h</key>
 		<data>
-		HexJ9uktxD88h1kElR+jZHAHSWU=
+		+TN4NiEO2wyyz+Fi/PykaWMkDk0=
 		</data>
 		<key>Headers/WLOnReadyToSubscribeListener.h</key>
 		<data>
-		rLiDJBwDWtbIUg49eH2BD9CCuZI=
+		ALkPDBZ93lfNyw3hiFOnrOnhFPg=
 		</data>
 		<key>Headers/WLProcedureInvocationData.h</key>
 		<data>
-		JYkbkJZiDtoMP8LYqyGN4meUbsc=
+		ByYmxxjKJ/WvOA6eY9GMC3IQ02I=
 		</data>
 		<key>Headers/WLProcedureInvocationResult.h</key>
 		<data>
-		ojg3BHCs/QkOm7LzdHQkefPpYF8=
+		/yN0SYnOVk09vmAIOscFYJfPKMA=
 		</data>
 		<key>Headers/WLPush.h</key>
 		<data>
-		rUiomf5g0NQbKvGXPyNKZVHsrw4=
+		EaXH0P5Pr8P+rp0DgCWySQXDnGM=
 		</data>
 		<key>Headers/WLPushOptions.h</key>
 		<data>
-		/c3BtUF+OhWzN6ztB14pb3eq12M=
+		sLpnkiO0xq5ZJaBY/tm9CLVP3Bo=
 		</data>
 		<key>Headers/WLResourceRequest.h</key>
 		<data>
-		VuE+NyeGeEweCyQMqwi77/Lk/Hg=
+		p7kSBcNtDlHErfijWFaP1vK6tdI=
 		</data>
 		<key>Headers/WLResponse.h</key>
 		<data>
-		H4oyhrJsNPVhReY8MOQ2m7cSXVA=
+		nTTFVjW8XRihAoeIy1HkKjRB+H4=
 		</data>
 		<key>Headers/WLResponseListener.h</key>
 		<data>
-		h26rxX7zXktOvhr4qDEZxUD8zPw=
+		SjSpBlEGxbm3KrcORWh7fUxcFD0=
 		</data>
 		<key>Headers/WLSecurityCommonUtils.h</key>
 		<data>
-		UcIpdUTp26g6U6sk7M4ienw12+o=
+		BSSiXbVhnCNdUhVWFutZuWcS0No=
 		</data>
 		<key>Headers/WLSecurityConstants.h</key>
 		<data>
-		y8X5UUL3PmB2nugPkAYmdGD8+Jo=
+		wi4+U6u8uNKcxpmdot27by56eOA=
 		</data>
 		<key>Headers/WLSecurityUtils.h</key>
 		<data>
-		AZfThe5AqL9FZGlUei+c/xUQZLc=
+		e21LoaUHBHJkMvO3kBp9rfK/mDk=
 		</data>
 		<key>Headers/WLSimpleDataSharing.h</key>
 		<data>
-		erF9Iz7DPnPBvqdtkg5EsYze3o8=
+		o06l9COMlOGLo6intDnozE3XYBc=
 		</data>
 		<key>Headers/WLTrusteer.h</key>
 		<data>
-		zHZ0QYY6Pc2F200YuR90S3sAMrI=
+		z1tJkBUoxVhBYlLQMWi+qktZkkk=
 		</data>
 		<key>Headers/WLUserCertAuth.h</key>
 		<data>
-		ouzFDYyn5YoF+ZICj8aBbXNrvyo=
+		+HFY3Y3MKq4agLejNH/iFI1Geh0=
+		</data>
+		<key>Headers/WLWatchConnectivityManager.h</key>
+		<data>
+		9UAHht2mD/nNEnfO77gkeSYZBTs=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		4eeWyfIky/jax2moLrc0JlrnF9s=
+		oZG5iPpg/Adu01Nhder06STkQJc=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -139,129 +143,133 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Headers/AccessToken.h</key>
+		<data>
+		PhHkWocysHNjMlGAc2fc0y4BSBU=
+		</data>
 		<key>Headers/BaseChallengeHandler.h</key>
 		<data>
-		s/Ny69RwzMffHbrJquTDPAbC3N0=
+		ml94T1Q4oRNG3Po1yYxTq9JVWAM=
 		</data>
 		<key>Headers/BaseDeviceAuthChallengeHandler.h</key>
 		<data>
-		F8UfVhTHKv8RCuwEdyBj1ia8XYI=
+		OSCOv0wA3oHPs1ZUk/Ngn8eGlXg=
 		</data>
 		<key>Headers/BaseProvisioningChallengeHandler.h</key>
 		<data>
-		rysR5YOvjw1Ee/6bZ1W2RytCvmo=
+		3d3RFH6CMUDvSxKBRAPzK3za4B8=
 		</data>
 		<key>Headers/ChallengeHandler.h</key>
 		<data>
-		xYtlfoNUSPS6O+xPktVZ5vKC5qY=
+		NSw1l9Qb2AQg/8p0TBSE3WBFD3E=
 		</data>
 		<key>Headers/IBMMobileFirstPlatformFoundation.h</key>
 		<data>
-		PxJYgTCHRbd9C9W/SQhJlcIyphc=
+		IVtQX+OV4KRbP6kwhNQrc7IrA+8=
 		</data>
 		<key>Headers/OCLogger+Constants.h</key>
 		<data>
-		ikxpY/oSzPvg/nJgKaDUlfQBqpw=
+		RLMiiE+GZ6FqsmOZudyhjv6G1yU=
 		</data>
 		<key>Headers/OCLogger.h</key>
 		<data>
-		ZOF5NkMcngSKkYwjezLwa+UL8nU=
+		1ruSUhp47iA9bAyWkJXHvGzkr7A=
 		</data>
 		<key>Headers/WLAnalytics.h</key>
 		<data>
-		H8HENu6M2P3yZRt3EAJoCurzhbk=
+		2+X3mxmiqfb06RPVoqMnILNYOJI=
 		</data>
 		<key>Headers/WLAuthorizationManager.h</key>
 		<data>
-		CEQmTPr1Ha3EiI0XLWYvie5Ku+Q=
-		</data>
-		<key>Headers/WLCertManagerCommon.h</key>
-		<data>
-		LtfR8IlhSiRjxfb2CvaYpG/LTX4=
+		gvP9NDiGGyfO/3EvvhXl/3dzwf0=
 		</data>
 		<key>Headers/WLChallengeHandler.h</key>
 		<data>
-		cJpan5zjdnPKCIALka3Wx+v7o9M=
+		PPFvUVCkXdX6/3FWwYHdJGf+P0M=
 		</data>
 		<key>Headers/WLClient.h</key>
 		<data>
-		ZFp8NNCVklrNTL/4V8RtdHElQ7M=
+		mhUFCELiCHHaNOkqv4e7aEMDINs=
 		</data>
 		<key>Headers/WLCookieExtractor.h</key>
 		<data>
-		BijV2VpD24dZtAoDVvkRgKMy1PA=
+		xR7cKjmjS4owlZvyzHtpTuMCtMM=
 		</data>
 		<key>Headers/WLDelegate.h</key>
 		<data>
-		d9xMvohtcpO7I8H5iUVMiWw3tbg=
+		1xzP1lBPHDbyjlmTZhEvpFYwUBY=
 		</data>
 		<key>Headers/WLDeviceAuthManager.h</key>
 		<data>
-		D7Xh8DbO+CfGc0ZS/GTHfiNBBAQ=
+		//SpiCveMgMeInTt/tn0fGqHNaE=
 		</data>
 		<key>Headers/WLEventSourceListener.h</key>
 		<data>
-		d8HYVGVforHmlbNH0hPm7WgPsyc=
+		0609u7qh9T9O6BL9c8Y2tyesaU4=
 		</data>
 		<key>Headers/WLFailResponse.h</key>
 		<data>
-		HexJ9uktxD88h1kElR+jZHAHSWU=
+		+TN4NiEO2wyyz+Fi/PykaWMkDk0=
 		</data>
 		<key>Headers/WLOnReadyToSubscribeListener.h</key>
 		<data>
-		rLiDJBwDWtbIUg49eH2BD9CCuZI=
+		ALkPDBZ93lfNyw3hiFOnrOnhFPg=
 		</data>
 		<key>Headers/WLProcedureInvocationData.h</key>
 		<data>
-		JYkbkJZiDtoMP8LYqyGN4meUbsc=
+		ByYmxxjKJ/WvOA6eY9GMC3IQ02I=
 		</data>
 		<key>Headers/WLProcedureInvocationResult.h</key>
 		<data>
-		ojg3BHCs/QkOm7LzdHQkefPpYF8=
+		/yN0SYnOVk09vmAIOscFYJfPKMA=
 		</data>
 		<key>Headers/WLPush.h</key>
 		<data>
-		rUiomf5g0NQbKvGXPyNKZVHsrw4=
+		EaXH0P5Pr8P+rp0DgCWySQXDnGM=
 		</data>
 		<key>Headers/WLPushOptions.h</key>
 		<data>
-		/c3BtUF+OhWzN6ztB14pb3eq12M=
+		sLpnkiO0xq5ZJaBY/tm9CLVP3Bo=
 		</data>
 		<key>Headers/WLResourceRequest.h</key>
 		<data>
-		VuE+NyeGeEweCyQMqwi77/Lk/Hg=
+		p7kSBcNtDlHErfijWFaP1vK6tdI=
 		</data>
 		<key>Headers/WLResponse.h</key>
 		<data>
-		H4oyhrJsNPVhReY8MOQ2m7cSXVA=
+		nTTFVjW8XRihAoeIy1HkKjRB+H4=
 		</data>
 		<key>Headers/WLResponseListener.h</key>
 		<data>
-		h26rxX7zXktOvhr4qDEZxUD8zPw=
+		SjSpBlEGxbm3KrcORWh7fUxcFD0=
 		</data>
 		<key>Headers/WLSecurityCommonUtils.h</key>
 		<data>
-		UcIpdUTp26g6U6sk7M4ienw12+o=
+		BSSiXbVhnCNdUhVWFutZuWcS0No=
 		</data>
 		<key>Headers/WLSecurityConstants.h</key>
 		<data>
-		y8X5UUL3PmB2nugPkAYmdGD8+Jo=
+		wi4+U6u8uNKcxpmdot27by56eOA=
 		</data>
 		<key>Headers/WLSecurityUtils.h</key>
 		<data>
-		AZfThe5AqL9FZGlUei+c/xUQZLc=
+		e21LoaUHBHJkMvO3kBp9rfK/mDk=
 		</data>
 		<key>Headers/WLSimpleDataSharing.h</key>
 		<data>
-		erF9Iz7DPnPBvqdtkg5EsYze3o8=
+		o06l9COMlOGLo6intDnozE3XYBc=
 		</data>
 		<key>Headers/WLTrusteer.h</key>
 		<data>
-		zHZ0QYY6Pc2F200YuR90S3sAMrI=
+		z1tJkBUoxVhBYlLQMWi+qktZkkk=
 		</data>
 		<key>Headers/WLUserCertAuth.h</key>
 		<data>
-		ouzFDYyn5YoF+ZICj8aBbXNrvyo=
+		+HFY3Y3MKq4agLejNH/iFI1Geh0=
+		</data>
+		<key>Headers/WLWatchConnectivityManager.h</key>
+		<data>
+		9UAHht2mD/nNEnfO77gkeSYZBTs=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
