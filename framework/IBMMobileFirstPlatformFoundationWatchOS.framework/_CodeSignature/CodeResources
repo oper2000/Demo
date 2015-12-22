@@ -24,6 +24,10 @@
 		<data>
 		NSw1l9Qb2AQg/8p0TBSE3WBFD3E=
 		</data>
+		<key>Headers/IBMMobileFirstPlatformFoundationWatchOS.h</key>
+		<data>
+		FVuyMyK4PZGxR6qS/2sLAXSsXVk=
+		</data>
 		<key>Headers/OCLogger+Constants.h</key>
 		<data>
 		RLMiiE+GZ6FqsmOZudyhjv6G1yU=
@@ -132,6 +136,10 @@
 		<data>
 		5KtQ6kXDuXFZJmJnuJV07ZxJ1zY=
 		</data>
+		<key>Modules/module.modulemap</key>
+		<data>
+		WZ6lBF891lA0HqtwKU3WToz20n4=
+		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
@@ -154,6 +162,10 @@
 		<key>Headers/ChallengeHandler.h</key>
 		<data>
 		NSw1l9Qb2AQg/8p0TBSE3WBFD3E=
+		</data>
+		<key>Headers/IBMMobileFirstPlatformFoundationWatchOS.h</key>
+		<data>
+		FVuyMyK4PZGxR6qS/2sLAXSsXVk=
 		</data>
 		<key>Headers/OCLogger+Constants.h</key>
 		<data>
@@ -258,6 +270,10 @@
 		<key>Headers/WLWatchConnectivityManager.h</key>
 		<data>
 		9UAHht2mD/nNEnfO77gkeSYZBTs=
+		</data>
+		<key>Modules/module.modulemap</key>
+		<data>
+		WZ6lBF891lA0HqtwKU3WToz20n4=
 		</data>
 	</dict>
 	<key>rules</key>
