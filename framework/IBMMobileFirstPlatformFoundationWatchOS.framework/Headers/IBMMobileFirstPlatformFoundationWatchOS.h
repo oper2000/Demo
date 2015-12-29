@@ -49,7 +49,7 @@ FOUNDATION_EXPORT const unsigned char IBMMobileFirstPlatformFoundationWatchOSVer
 #import <IBMMobileFirstPlatformFoundationWatchOS/WLSecurityUtils.h>
 #import <IBMMobileFirstPlatformFoundationWatchOS/WLSecurityCommonUtils.h>
 #import <IBMMobileFirstPlatformFoundationWatchOS/WLSimpleDataSharing.h>
-#import <IBMMobileFirstPlatformFoundationWatchOS/WLWatchConnectivityManager.h>
+//#import <IBMMobileFirstPlatformFoundationWatchOS/WLWatchConnectivityManager.h>
 #import <IBMMobileFirstPlatformFoundationWatchOS/WLTrusteer.h>
 #import <IBMMobileFirstPlatformFoundationWatchOS/WLUserCertAuth.h>
 //#import <IBMMobileFirstPlatformFoundationWatchOS/WLCertManagerCommon.h>

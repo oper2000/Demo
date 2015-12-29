@@ -26,7 +26,7 @@
 		</data>
 		<key>Headers/IBMMobileFirstPlatformFoundationWatchOS.h</key>
 		<data>
-		FVuyMyK4PZGxR6qS/2sLAXSsXVk=
+		HzkGon+qjl80HcxyexYCMfVvSMU=
 		</data>
 		<key>Headers/OCLogger+Constants.h</key>
 		<data>
@@ -42,7 +42,7 @@
 		</data>
 		<key>Headers/WLAuthorizationManager.h</key>
 		<data>
-		gvP9NDiGGyfO/3EvvhXl/3dzwf0=
+		2TO7vK9Uoe3hUlrZYEy1DFU5etE=
 		</data>
 		<key>Headers/WLChallengeHandler.h</key>
 		<data>
@@ -127,10 +127,6 @@
 		<key>Headers/WLUserCertAuth.h</key>
 		<data>
 		+HFY3Y3MKq4agLejNH/iFI1Geh0=
-		</data>
-		<key>Headers/WLWatchConnectivityManager.h</key>
-		<data>
-		9UAHht2mD/nNEnfO77gkeSYZBTs=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -165,7 +161,7 @@
 		</data>
 		<key>Headers/IBMMobileFirstPlatformFoundationWatchOS.h</key>
 		<data>
-		FVuyMyK4PZGxR6qS/2sLAXSsXVk=
+		HzkGon+qjl80HcxyexYCMfVvSMU=
 		</data>
 		<key>Headers/OCLogger+Constants.h</key>
 		<data>
@@ -181,7 +177,7 @@
 		</data>
 		<key>Headers/WLAuthorizationManager.h</key>
 		<data>
-		gvP9NDiGGyfO/3EvvhXl/3dzwf0=
+		2TO7vK9Uoe3hUlrZYEy1DFU5etE=
 		</data>
 		<key>Headers/WLChallengeHandler.h</key>
 		<data>
@@ -266,10 +262,6 @@
 		<key>Headers/WLUserCertAuth.h</key>
 		<data>
 		+HFY3Y3MKq4agLejNH/iFI1Geh0=
-		</data>
-		<key>Headers/WLWatchConnectivityManager.h</key>
-		<data>
-		9UAHht2mD/nNEnfO77gkeSYZBTs=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>

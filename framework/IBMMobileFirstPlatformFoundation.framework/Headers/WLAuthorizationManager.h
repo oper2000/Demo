@@ -22,6 +22,10 @@ extern NSString * const ERROR_OAUTH_CANCELED;
  */
 @interface WLAuthorizationManager : NSObject
 
+/**
+ * Returns the authorization server URL, if this was not set, the default MFP Authorization URL is returned
+ */
+@property(atomic) NSURL *authorizationServerURL;
 
 /**
  * Gets the <code>WLAuthorizationManager</code> shared instance
@@ -90,6 +94,14 @@ extern NSString * const ERROR_OAUTH_CANCELED;
  * @param AccessToken to remove
  */
 - (void) clearAccessToken:(AccessToken*)accessToken;
+
+/**
+ * Sets the authorization server URL
+ * If this field is not set, the default MFP Authorization server URL is used
+ * @param the context root of the authorization server
+ */
+-(void) setAuthorizationServerURL:(NSURL *)url;
+
 
 /**
  * Returns the resource scope from a response for a request to a MobileFirst protected resource.
